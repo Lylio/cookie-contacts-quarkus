@@ -1,4 +1,4 @@
-![](https://github.com/Lylio/image-repo/blob/master/logos/spring-boot.png?raw=true)
+![](https://github.com/Lylio/image-repo/blob/master/logos/quarkus.png?raw=true)
 ![](https://github.com/Lylio/image-repo/blob/master/logos/react.png?raw=true)
 ![](https://github.com/Lylio/image-repo/blob/master/logos/mongodb.png?raw=true)
 ![](https://github.com/Lylio/image-repo/blob/master/logos/auth0.png?raw=true)
