@@ -21,24 +21,30 @@ Create a MongoDB database called 'quarkus-contacts' using the Mongo shell:
 `use quarkus-contacts`
 
 The database won't be visible with the command `show dbs` until some data has been inserted
-into the User table:
+into the Contact table:
 
-POST http://localhost:8080/api/users
+POST http://localhost:8080/api/contacts
 ```
 {
-   "firstName":"Sarah",
-   "lastName": "Piddle",
-   "emailId": "spiddy@gmail.com"
+    "firstName": "Artie",
+    "lastName": "Foodle",
+    "emailAddress": "a.foodle@horizon.com",
+    "phoneNumber": "+44 0768763387676",
+    "jobTitle": "Tech Lead",
+    "company": "Horizon"
 }
 ```
 
-GET http://localhost:8080/api/users
+GET http://localhost:8080/api/contacts
 ```
  {
-     "emailId": "spiddy@gmail.com",
-     "firstName": "Sarah",
-     "id": "61953f30f0527210d131cc82",
-     "lastName": "Piddle"
+        "company": "Horizon",
+        "emailAddress": "a.foodle@horizon.com",
+        "firstName": "Artie",
+        "id": "61958dac403658344c7c2847",
+        "jobTitle": "Tech Lead",
+        "lastName": "Foodle",
+        "phoneNumber": "+44 0768763387676"
  }
 ```
 
