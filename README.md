@@ -2,7 +2,7 @@
 ![](https://github.com/Lylio/image-repo/blob/master/logos/react.png?raw=true)
 ![](https://github.com/Lylio/image-repo/blob/master/logos/mongodb.png?raw=true)
 
-# Yaldi Contacts
+# Laldy Contacts
 
 ### Description
 A contact management app for users to store name, address, email and phone number data.
@@ -15,8 +15,8 @@ A contact management app for users to store name, address, email and phone numbe
 ### Setup & Launch
 
 #### Database
-Create a MongoDB database called 'yaldi-contacts' using the Mongo shell:
-`use yaldi-contacts`
+Create a MongoDB database called 'laldy-contacts' using the Mongo shell:
+`use laldy-contacts`
 
 The database won't be visible with the command `show dbs` until some data has been inserted
 into the Contact table:
