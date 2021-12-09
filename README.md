@@ -2,7 +2,7 @@
 ![](https://github.com/Lylio/image-repo/blob/master/logos/react.png?raw=true)
 ![](https://github.com/Lylio/image-repo/blob/master/logos/mongodb.png?raw=true)
 
-# Laldy Contacts
+# Cookie Contacts
 
 ### Description
 A contact management app for users to store name, address, email and phone number data.
@@ -11,12 +11,23 @@ A contact management app for users to store name, address, email and phone numbe
 - Quarkus (JDK 11)
 - React
 - MongoDB
+- Maven
 
 ### Setup & Launch
 
+#### Quarkus Profiles
+
+*DEV*  
+The dev profile connects to a local instance of MongoDB:
+`mvn quarkus:dev`
+
+*PROD*  
+The prod profile connects to a cloud (Atlas) instance of MongoDB:
+`mvn quarkus:dev -Dquarkus.profile=prod`
+
 #### Database
-Create a MongoDB database called 'laldy-contacts' using the Mongo shell:
-`use laldy-contacts`
+Create a MongoDB database called 'cookie-contacts' using the Mongo shell:
+`use cookie-contacts`
 
 The database won't be visible with the command `show dbs` until some data has been inserted
 into the Contact table:
