@@ -38,7 +38,7 @@ class ListUserComponent extends Component {
     render() {
         return (
             <div>
-                 <h2 className="text-center">Users List</h2>
+                 <h2 className="text-center">Cookie Contacts</h2>
                  <div className = "row">
                     <button className="btn btn-primary" onClick={this.addUser}> Add User</button>
                  </div>
@@ -48,20 +48,26 @@ class ListUserComponent extends Component {
 
                             <thead>
                                 <tr>
-                                    <th> User First Name</th>
-                                    <th> User Last Name</th>
-                                    <th> User Email Id</th>
+                                    <th> First Name</th>
+                                    <th> Last Name</th>
+                                    <th> Email Address</th>
+                                    <th> Phone Number</th>
+                                    <th> Job Title</th>
+                                    <th> Company</th>
                                     <th> Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {
                                     this.state.users.map(
-                                        user => 
+                                        user =>
                                         <tr key = {user.id}>
-                                             <td> { user.firstName} </td>   
+                                             <td> {user.firstName} </td>
                                              <td> {user.lastName}</td>
                                              <td> {user.emailId}</td>
+                                             <td> {user.phoneNumber}</td>
+                                             <td> {user.jobTitle}</td>
+                                             <td> {user.company}</td>
                                              <td>
                                                  <button onClick={ () => this.editUser(user.id)} className="btn btn-info">Update </button>
                                                  <button style={{marginLeft: "10px"}} onClick={ () => this.deleteUser(user.id)} className="btn btn-danger">Delete </button>
