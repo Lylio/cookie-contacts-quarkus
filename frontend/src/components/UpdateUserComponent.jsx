@@ -10,12 +10,13 @@ class UpdateUserComponent extends Component {
             firstName: '',
             lastName: '',
             phoneNumber:'',
-            emailId: '',
+            emailAddress: '',
             jobTitle: '',
             company: ''
         }
         this.changeFirstNameHandler = this.changeFirstNameHandler.bind(this);
         this.changeLastNameHandler = this.changeLastNameHandler.bind(this);
+        this.changePhoneNumber = this.changePhoneNumber.bind(this);
         this.updateUser = this.updateUser.bind(this);
     }
 
@@ -24,14 +25,14 @@ class UpdateUserComponent extends Component {
             let user = res.data;
             this.setState({firstName: user.firstName,
                 lastName: user.lastName,
-                emailId : user.emailId
+                emailAddress : user.emailAddress
             });
         });
     }
 
     updateUser = (e) => {
         e.preventDefault();
-        let user = {firstName: this.state.firstName, lastName: this.state.lastName, emailId: this.state.emailId};
+        let user = {firstName: this.state.firstName, lastName: this.state.lastName, emailAddress: this.state.emailAddress, jobTitle: this.state.jobTitle};
         console.log('user => ' + JSON.stringify(user));
         console.log('id => ' + JSON.stringify(this.state.id));
         UserService.updateUser(user, this.state.id).then( res => {
@@ -48,7 +49,7 @@ class UpdateUserComponent extends Component {
     }
 
     changeEmailHandler= (event) => {
-        this.setState({emailId: event.target.value});
+        this.setState({emailAddress: event.target.value});
     }
 
     cancel(){
@@ -71,14 +72,24 @@ class UpdateUserComponent extends Component {
                                                 value={this.state.firstName} onChange={this.changeFirstNameHandler}/>
                                         </div>
                                         <div className = "form-group">
-                                            <label> Last Name: </label>
+                                            <label> Last Butt: </label>
                                             <input placeholder="Last Name" name="lastName" className="form-control"
                                                 value={this.state.lastName} onChange={this.changeLastNameHandler}/>
                                         </div>
                                         <div className = "form-group">
-                                            <label> Email Id: </label>
-                                            <input placeholder="Email Address" name="emailId" className="form-control"
-                                                value={this.state.emailId} onChange={this.changeEmailHandler}/>
+                                            <label> Email Address: </label>
+                                            <input placeholder="Email Address" name="emailAddress" className="form-control"
+                                                value={this.state.emailAddress} onChange={this.changeEmailHandler}/>
+                                        </div>
+                                        <div className = "form-group">
+                                            <label> Phone Number: </label>
+                                            <input placeholder="Phone Number" name="phoneNumber" className="form-control"
+                                                   value={this.state.phoneNumber} onChange={this.changePhoneNumberHandler}/>
+                                        </div>
+                                        <div className = "form-group">
+                                            <label> Company: </label>
+                                            <input placeholder="Company" name="Company" className="form-control"
+                                                   value={this.state.company} onChange={this.changeCompany}/>
                                         </div>
 
                                         <button className="btn btn-success" onClick={this.updateUser}>Save</button>

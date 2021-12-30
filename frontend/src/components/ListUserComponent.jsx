@@ -64,7 +64,7 @@ class ListUserComponent extends Component {
                                         <tr key = {user.id}>
                                              <td> {user.firstName} </td>
                                              <td> {user.lastName}</td>
-                                             <td> {user.emailId}</td>
+                                             <td> {user.emailAddress}</td>
                                              <td> {user.phoneNumber}</td>
                                              <td> {user.jobTitle}</td>
                                              <td> {user.company}</td>

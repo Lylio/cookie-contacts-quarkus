@@ -10,7 +10,10 @@ class CreateUserComponent extends Component {
             id: this.props.match.params.id,
             firstName: '',
             lastName: '',
-            emailId: ''
+            emailAddress: '',
+            phoneNumber: '',
+            jobTitle: '',
+            company: ''
         }
         this.changeFirstNameHandler = this.changeFirstNameHandler.bind(this);
         this.changeLastNameHandler = this.changeLastNameHandler.bind(this);
@@ -28,14 +31,18 @@ class CreateUserComponent extends Component {
                 let user = res.data;
                 this.setState({firstName: user.firstName,
                     lastName: user.lastName,
-                    emailId : user.emailId
+                    emailAddress : user.emailAddress,
+                    phoneNumber : user.phoneNumber,
+                    jobTitle : user.jobTitle,
+                    company: user.company
                 });
             });
-        }        
+        }
     }
     saveOrUpdateUser = (e) => {
         e.preventDefault();
-        let user = {firstName: this.state.firstName, lastName: this.state.lastName, emailId: this.state.emailId};
+        let user = {firstName: this.state.firstName, lastName: this.state.lastName, emailAddress: this.state.emailAddress, phoneNumber: this.state.phoneNumber,
+        jobTitle: this.state.jobTitle, company: this.state.company};
         console.log('user => ' + JSON.stringify(user));
 
         // step 5
@@ -49,7 +56,7 @@ class CreateUserComponent extends Component {
             });
         }
     }
-    
+
     changeFirstNameHandler= (event) => {
         this.setState({firstName: event.target.value});
     }
@@ -59,7 +66,19 @@ class CreateUserComponent extends Component {
     }
 
     changeEmailHandler= (event) => {
-        this.setState({emailId: event.target.value});
+        this.setState({emailAddress: event.target.value});
+    }
+
+    changePhoneNumberHandler= (event) => {
+        this.setState({phoneNumber: event.target.value});
+    }
+
+    changeJobTitleHandler= (event) => {
+        this.setState({jobTitle: event.target.value});
+    }
+
+    changeCompanyHandler= (event) => {
+        this.setState({company: event.target.value});
     }
 
     cancel(){
@@ -87,18 +106,33 @@ class CreateUserComponent extends Component {
                                     <form>
                                         <div className = "form-group">
                                             <label> First Name: </label>
-                                            <input placeholder="First Name" name="firstName" className="form-control" 
+                                            <input placeholder="First Name" name="firstName" className="form-control"
                                                 value={this.state.firstName} onChange={this.changeFirstNameHandler}/>
                                         </div>
                                         <div className = "form-group">
                                             <label> Last Name: </label>
-                                            <input placeholder="Last Name" name="lastName" className="form-control" 
+                                            <input placeholder="Last Name" name="lastName" className="form-control"
                                                 value={this.state.lastName} onChange={this.changeLastNameHandler}/>
                                         </div>
                                         <div className = "form-group">
-                                            <label> Email Id: </label>
-                                            <input placeholder="Email Address" name="emailId" className="form-control" 
-                                                value={this.state.emailId} onChange={this.changeEmailHandler}/>
+                                            <label> Email Address: </label>
+                                            <input placeholder="Email Address" name="emailAddress" className="form-control"
+                                                value={this.state.emailAddress} onChange={this.changeEmailHandler}/>
+                                        </div>
+                                        <div className = "form-group">
+                                            <label> Phone Number: </label>
+                                            <input placeholder="Phone Number" name="phoneNumber" className="form-control"
+                                                   value={this.state.phoneNumber} onChange={this.changePhoneNumberHandler}/>
+                                        </div>
+                                        <div className = "form-group">
+                                            <label> Job Title: </label>
+                                            <input placeholder="Job Title" name="jobTitle" className="form-control"
+                                                   value={this.state.jobTitle} onChange={this.changeJobTitleHandler}/>
+                                        </div>
+                                        <div className = "form-group">
+                                            <label> Company: </label>
+                                            <input placeholder="Company" name="company" className="form-control"
+                                                   value={this.state.company} onChange={this.changeCompanyHandler}/>
                                         </div>
 
                                         <button className="btn btn-success" onClick={this.saveOrUpdateUser}>Save</button>

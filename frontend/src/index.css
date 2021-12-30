@@ -23,3 +23,16 @@ code {
     text-decoration: none;
     color: #969696;
   }
+
+.home-link {
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+  a.home-link {
+    color: #ffffff;
+  }
+  a.home-link:hover {
+    text-decoration: none;
+    color: #d0d0d0;
+  }
+
