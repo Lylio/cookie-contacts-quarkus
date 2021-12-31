@@ -14,7 +14,7 @@ class HeaderComponent extends Component {
             <div>
                 <header>
                     <nav className="navbar navbar-dark bg-primary">
-                        <div><a href="/" className="home-link" ><b>COOKIE CONTACTS</b></a></div>
+                        <div><a href="/" className="home-link" ><b>🍪 COOKIE CONTACTS</b></a></div>
                     </nav>
                 </header>
             </div>
