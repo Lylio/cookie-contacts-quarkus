@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+.cookie-index-title {
+  text-align: center;
+  color: #6b6b6b;
+}
+
 .copyright {
   line-height: 50px;
   color: #6b6b6b;

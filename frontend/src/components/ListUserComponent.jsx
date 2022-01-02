@@ -38,7 +38,7 @@ class ListUserComponent extends Component {
     render() {
         return (
             <div>
-                 <h2 className="text-center">Cookie Contacts</h2>
+                <h2 className="cookie-index-title"><b>Cookie</b> Contacts</h2>
                  <div className = "row">
                     <button className="btn btn-primary" onClick={this.addUser}> Add User</button>
                  </div>

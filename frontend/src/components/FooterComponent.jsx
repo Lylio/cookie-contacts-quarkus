@@ -15,7 +15,7 @@ class FooterComponent extends Component {
 
     render() {
         return (
-            <div>
+            <div className="footer-parent">
                 <footer className = "footer">
                     <span className="copyright">©{this.getYear()} <a href="https://www.linkedin.com/in/lylechristine/">LYLE CHRISTINE</a></span>
                 </footer>
