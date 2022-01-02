@@ -113,22 +113,22 @@ class CreateUserComponent extends Component {
                                     <form>
                                         <div className = "form-group">
                                             <label> First Name: </label>
-                                            <input placeholder="First Name" name="firstName" className="form-control"
+                                            <input placeholder="e.g. Sarah" name="firstName" className="form-control"
                                                 value={this.state.firstName} onChange={this.changeFirstNameHandler}/>
                                         </div>
                                         <div className = "form-group">
                                             <label> Last Name: </label>
-                                            <input placeholder="Last Name" name="lastName" className="form-control"
+                                            <input placeholder="e.g. White" name="lastName" className="form-control"
                                                 value={this.state.lastName} onChange={this.changeLastNameHandler}/>
                                         </div>
                                         <div className = "form-group">
                                             <label> Email Address: </label>
-                                            <input placeholder="Email Address" name="emailAddress" className="form-control"
+                                            <input placeholder="e.g. s.white@gmail.com" name="emailAddress" className="form-control"
                                                 value={this.state.emailAddress} onChange={this.changeEmailHandler}/>
                                         </div>
                                         <div className = "form-group">
                                             <label> Phone Number: </label>
-                                            <input placeholder="Phone Number" name="phoneNumber" className="form-control"
+                                            <input placeholder="International dialling codes not needed e.g. 01441 987 7657" name="phoneNumber" className="form-control"
                                                    value={this.state.phoneNumber} onChange={this.changePhoneNumberHandler}/>
                                         </div>
                                         <div className = "form-group">
@@ -144,7 +144,7 @@ class CreateUserComponent extends Component {
                                         </div>
                                         <div className = "form-group">
                                             <label> Profile Link: </label>
-                                            <input placeholder="Profile Link" name="profileLink" className="form-control"
+                                            <input placeholder="e.g. https://www.mysite.com/me-last-year.jpg" name="profileLink" className="form-control"
                                                    value={this.state.profileLink} onChange={this.changeProfileLinkHandler}/>
                                         </div>
 

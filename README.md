@@ -40,7 +40,8 @@ POST http://localhost:8080/api/contacts
     "emailAddress": "a.foodle@horizon.com",
     "phoneNumber": "+44 0768763387676",
     "jobTitle": "Tech Lead",
-    "company": "Horizon"
+    "company": "Horizon",
+    "profileLink": "https://i.pinimg.com/474x/a1/9d/fd/a19dfd0cd5b84390c983b372c91b7f22.jpg"
 }
 ```
 
