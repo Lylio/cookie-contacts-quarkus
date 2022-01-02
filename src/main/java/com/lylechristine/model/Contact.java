@@ -15,6 +15,7 @@ public class Contact {
     private String phoneNumber;
     private String jobTitle;
     private String company;
+    private String profileLink;
 
     public Contact() {
         super();

@@ -53,3 +53,8 @@
   position: relative;
   min-height: 47vh;
 }
+
+.profile-image {
+  width:100%;
+  max-width:500px;
+}

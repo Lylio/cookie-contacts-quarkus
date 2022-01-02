@@ -13,7 +13,9 @@ class CreateUserComponent extends Component {
             emailAddress: '',
             phoneNumber: '',
             jobTitle: '',
-            company: ''
+            company: '',
+            profileLink: ''
+
         }
         this.changeFirstNameHandler = this.changeFirstNameHandler.bind(this);
         this.changeLastNameHandler = this.changeLastNameHandler.bind(this);
@@ -34,7 +36,8 @@ class CreateUserComponent extends Component {
                     emailAddress : user.emailAddress,
                     phoneNumber : user.phoneNumber,
                     jobTitle : user.jobTitle,
-                    company: user.company
+                    company: user.company,
+                    profileLink: user.profileLink
                 });
             });
         }
@@ -42,7 +45,7 @@ class CreateUserComponent extends Component {
     saveOrUpdateUser = (e) => {
         e.preventDefault();
         let user = {firstName: this.state.firstName, lastName: this.state.lastName, emailAddress: this.state.emailAddress, phoneNumber: this.state.phoneNumber,
-        jobTitle: this.state.jobTitle, company: this.state.company};
+        jobTitle: this.state.jobTitle, company: this.state.company, profileLink: this.state.profileLink};
         console.log('user => ' + JSON.stringify(user));
 
         // step 5
@@ -79,6 +82,10 @@ class CreateUserComponent extends Component {
 
     changeCompanyHandler= (event) => {
         this.setState({company: event.target.value});
+    }
+
+    changeProfileLinkHandler= (event) => {
+        this.setState({profileLink: event.target.value});
     }
 
     cancel(){
@@ -129,10 +136,16 @@ class CreateUserComponent extends Component {
                                             <input placeholder="Job Title" name="jobTitle" className="form-control"
                                                    value={this.state.jobTitle} onChange={this.changeJobTitleHandler}/>
                                         </div>
+
                                         <div className = "form-group">
                                             <label> Company: </label>
                                             <input placeholder="Company" name="company" className="form-control"
                                                    value={this.state.company} onChange={this.changeCompanyHandler}/>
+                                        </div>
+                                        <div className = "form-group">
+                                            <label> Profile Link: </label>
+                                            <input placeholder="Profile Link" name="profileLink" className="form-control"
+                                                   value={this.state.profileLink} onChange={this.changeProfileLinkHandler}/>
                                         </div>
 
                                         <button className="btn btn-success" onClick={this.saveOrUpdateUser}>Save</button>

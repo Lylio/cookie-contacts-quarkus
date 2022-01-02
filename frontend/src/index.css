@@ -29,6 +29,18 @@ code {
     color: #969696;
   }
 
+.back-link {
+  font-size: 1.25rem;
+  color: #d0d0d0;
+}
+  a.back-link {
+    color: #d0d0d0;
+  }
+  a.back-link:hover {
+    text-decoration: none;
+    color: #e3e0e0;
+  }
+
 .home-link {
   font-size: 1.25rem;
   color: #ffffff;

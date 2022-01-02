@@ -12,7 +12,8 @@ class UpdateUserComponent extends Component {
             phoneNumber:'',
             emailAddress: '',
             jobTitle: '',
-            company: ''
+            company: '',
+            profileLink: ''
         }
         this.changeFirstNameHandler = this.changeFirstNameHandler.bind(this);
         this.changeLastNameHandler = this.changeLastNameHandler.bind(this);
@@ -52,6 +53,22 @@ class UpdateUserComponent extends Component {
         this.setState({emailAddress: event.target.value});
     }
 
+    changePhoneNumberHandler= (event) => {
+        this.setState({phoneNumber: event.target.value});
+    }
+
+    changeJobTitleHandler= (event) => {
+        this.setState({jobTitle: event.target.value});
+    }
+
+    changeCompanyHandler= (event) => {
+        this.setState({company: event.target.value});
+    }
+
+    changeProfileLinkHandler= (event) => {
+        this.setState({profileLink: event.target.value});
+    }
+
     cancel(){
         this.props.history.push('/users');
     }
@@ -89,7 +106,12 @@ class UpdateUserComponent extends Component {
                                         <div className = "form-group">
                                             <label> Company: </label>
                                             <input placeholder="Company" name="Company" className="form-control"
-                                                   value={this.state.company} onChange={this.changeCompany}/>
+                                                   value={this.state.company} onChange={this.changeCompanyHandler}/>
+                                        </div>
+                                        <div className = "form-group">
+                                            <label> Profile Link: </label>
+                                            <input placeholder="Profile Link" name="profileLink" className="form-control"
+                                                   value={this.state.profileLink} onChange={this.changeProfileLinkHandler}/>
                                         </div>
 
                                         <button className="btn btn-success" onClick={this.updateUser}>Save</button>

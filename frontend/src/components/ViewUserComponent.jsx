@@ -5,6 +5,7 @@ class ViewUserComponent extends Component {
     constructor(props) {
         super(props)
 
+
         this.state = {
             id: this.props.match.params.id,
             user: {}
@@ -24,6 +25,10 @@ class ViewUserComponent extends Component {
                 <div className = "card col-md-6 offset-md-3">
                     <h3 className = "text-center"> View User Details</h3>
                     <div className = "card-body">
+                        <div className = "row">
+                            <img className="profile-image" src={ this.state.user.profileLink }></img>
+                        </div>
+                        <br/>
                         <div className = "row">
                             <label><b>First Name:&nbsp; </b></label>
                             <div>{ this.state.user.firstName }</div>
@@ -48,8 +53,11 @@ class ViewUserComponent extends Component {
                             <label><b>Company:&nbsp; </b></label>
                             <div> { this.state.user.company }</div>
                         </div>
+                        <br/>
+                        <div className = "row">
+                            <div><a href="/" className="back-link" >🍪 <b>Back</b></a></div>
+                        </div>
                     </div>
-
                 </div>
             </div>
         )
