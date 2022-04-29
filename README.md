@@ -2,7 +2,7 @@
 ![](https://github.com/Lylio/image-repo/blob/master/logos/react.png?raw=true)
 ![](https://github.com/Lylio/image-repo/blob/master/logos/mongodb.png?raw=true)
 
-# Cookie Contacts
+# Cookie Contacts (Quarkus)
 
 ### Description
 A contact management app for users to store name, address, email and phone number data.
